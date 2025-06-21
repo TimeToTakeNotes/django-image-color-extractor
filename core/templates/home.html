@@ -2,8 +2,60 @@
 <html>
 <head>
     <title>Django Image Color Extractor</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        .home-title {
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 600;
+            font-size: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .btn-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
+        }
+
+        a {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            margin: 10px;
+            border-radius: 6px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 3px 8px rgba(74, 144, 226, 0.4);
+        }
+
+        a:hover {
+            background-color: #357ABD;
+            box-shadow: 0 5px 12px rgba(53, 122, 189, 0.6);
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Well Hello There!</h1>
+    <h1 class="home-title">Django Image Color Extractor</h1>
+
+    <div class="btn-container">
+        <a href="{% url 'upload' %}">Upload an Image</a>
+        <a href="{% url 'list_images' %}">Go to Image List</a> 
+    </div>
 </body>
 </html>

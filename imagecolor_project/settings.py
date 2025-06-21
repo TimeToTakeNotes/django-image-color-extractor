@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,6 +52,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'imagecolor_project.urls'
+
+# URL that handles media served from MEDIA_ROOT
+MEDIA_URL = '/media/'
+
+# Absolute file path to dir that will hold media uploads
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TEMPLATES = [
     {

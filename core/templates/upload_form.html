@@ -1,0 +1,119 @@
+<h1>Upload an Image</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Upload</button>
+</form>
+
+{% if uploaded_image %}
+  <h2>Uploaded Image</h2>
+  <img class="img" src="{{ uploaded_image.image.url }}" alt="Uploaded Image">
+  <p>Centre Pixel Hex Color: <span>{{ hex_color }}</span>
+    <span class="color-box" style="background-color: {{ hex_color }};"></span>
+  </p>
+{% endif %}
+
+<div class="nav-buttons">
+  <a href="{% url 'home' %}">Back to Home</a>
+  <a href="{% url 'list_images' %}">Go to Image List</a>
+</div>
+
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #4a90e2;
+  }
+
+  form {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.15);
+    margin-bottom: 30px;
+  }
+
+  form p {
+    margin-bottom: 15px;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  button[type="submit"] {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(74, 144, 226, 0.4);
+  }
+
+  button[type="submit"]:hover {
+    background-color: #357ABD;
+    box-shadow: 0 5px 12px rgba(53, 122, 189, 0.6);
+  }
+
+  .img {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 300px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .color-box {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .nav-buttons a {
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 8px rgba(74, 144, 226, 0.4);
+  }
+
+  .nav-buttons a:hover {
+    background-color: #357ABD;
+    box-shadow: 0 5px 12px rgba(53, 122, 189, 0.6);
+  }
+</style>

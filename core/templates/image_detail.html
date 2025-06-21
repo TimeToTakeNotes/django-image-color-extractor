@@ -1,0 +1,57 @@
+<h1>Image Details</h1>
+
+<img src="{{ image.image.url }}" alt="Uploaded Image"/>
+<p>Centre Pixel Hex Color: <span>{{ image.hex_color }}</span>
+    <span class="color-box" style="background-color: {{ image.hex_color }};"></span>
+</p>
+<a href="{% url 'list_images' %}">Back to List</a>
+
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .color-box {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  img {
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  a {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 8px rgba(74, 144, 226, 0.4);
+  }
+
+  a:hover {
+    background-color: #357ABD;
+    box-shadow: 0 5px 12px rgba(53, 122, 189, 0.6);
+  }
+</style>
