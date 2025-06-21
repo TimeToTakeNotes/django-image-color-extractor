@@ -29,7 +29,7 @@ This Django application allows users to upload images and automatically extracts
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/django-image-color-extractor.git
+git clone https://github.com/TimeToTakeNotes/django-image-color-extractor.git
 cd django-image-color-extractor
 ```
 ### 2. Create & activate the virtual environment
