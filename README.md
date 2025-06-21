@@ -68,5 +68,5 @@ Visit: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 1. Navigate to the home page.
 2. Click Upload an Image.
 3. Choose an image and submit the form.
-4. You’ll be redirected to a preview with the uploaded image and the extracted color.
-5. Navigate to /images/ to view all uploaded images and colors.
+4. You’ll see  preview of the uploaded image as well as the extracted color.
+5. Click Image List to view list of al all uploaded images.
