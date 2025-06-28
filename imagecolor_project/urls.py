@@ -26,5 +26,5 @@ urlpatterns = [
     path('', include('core.urls')),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG: # Lets Django serve uploaded media files during dev; in prod, a web server like Nginx would handle them instead.
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

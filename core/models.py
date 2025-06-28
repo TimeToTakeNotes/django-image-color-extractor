@@ -1,6 +1,4 @@
 from django.db import models
-from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFill
 
 class ImageColor(models.Model):
     image = models.ImageField(upload_to='uploads/')
